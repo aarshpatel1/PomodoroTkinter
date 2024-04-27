@@ -1,4 +1,5 @@
 from tkinter import *
+import math
 
 # ---------------------------- CONSTANTS ------------------------------- #
 PINK = "#e2979c"
@@ -15,12 +16,15 @@ LONG_BREAK_MIN = 20
 
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
-    count_down(5)
+    count_down(5 * 60)
 
 
 # ---------------------------- COUNTDOWN MECHANISM ------------------------------- #
 def count_down(count):
-    canvas.itemconfig(timer_text, text=count)
+    minutes = math.floor(count / 60)
+    seconds = count % 60
+
+    canvas.itemconfig(timer_text, text=f"{minutes}:{seconds}")
     if count > 0:
         window.after(1000, count_down, count - 1)
 
