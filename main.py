@@ -11,7 +11,8 @@ WORK_MIN = 25
 SHORT_BREAK_MIN = 5
 LONG_BREAK_MIN = 20
 reps = 0
-timer = None  # "None" indicates that there is no datatype of the timer variable, but we just created the variable
+timer = None
+# Note: in python, "None" indicates that there is no datatype of the variable, but we just created the variable
 
 
 # ---------------------------- TIMER RESET ------------------------------- #
